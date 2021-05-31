@@ -1,0 +1,2 @@
+codestar_connector_cred = "arn:aws:codestar-connections:us-east-1:349483170201:connection/d5d82e41-8e34-4b0f-a9eb-3fc49e8de6d1"
+docker_cred = "arn:aws:secretsmanager:us-east-1:349483170201:secret:codebuild/dockerhub-1RpQDs"
