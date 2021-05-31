@@ -1,5 +1,5 @@
 resource "aws_codebuild_project" "tf-plan" {
-  name          = "tf-cicd-plan2"
+  name          = "tf-cicd-plan"
   description   = "Plan stage for terraform"
   service_role  = aws_iam_role.tf-codebuild-role.arn
 
@@ -70,9 +70,9 @@ resource "aws_codepipeline" "cicd_pipeline" {
             version = "1"
             output_artifacts = ["tf-code"]
             configuration = {
-                FullRepositoryId = "PranjaliKumbhar/aws-cicd-pipeline "
+                FullRepositoryId = "PranjaliKumbhar/aws-cicd-pipeline"
                 BranchName   = "master"
-                ConnectionArn = var.codestar_connector_cred
+                ConnectionArn = "arn:aws:codestar-connections:us-east-1:349483170201:connection/d5d82e41-8e34-4b0f-a9eb-3fc49e8de6d1"
                 OutputArtifactFormat = "CODE_ZIP"
             }
         }
