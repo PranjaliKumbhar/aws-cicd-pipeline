@@ -1,6 +1,6 @@
 terraform{
     backend "s3"{
-        bucket = "aws-cicd-codepipeline"
+        bucket = "tfbuk"
         encrypt = true
         key = "terraform.tfstate"
         region = "us-east-1"
